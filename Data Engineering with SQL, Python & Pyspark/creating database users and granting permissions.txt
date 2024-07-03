@@ -1,0 +1,13 @@
+create database data_analysis_retail_db;
+
+create user data_analysis_retail_user with encrypted password '1234';
+
+grant all on database data_analysis_retail_db to data_analysis_retail_user;
+
+ALTER DATABASE data_analysis_retail_db OWNER TO data_analysis_retail_user;
+
+CREATE TABLE departments (
+  department_id INT NOT NULL,
+  department_name VARCHAR(45) NOT NULL,
+  PRIMARY KEY (department_id)
+);
